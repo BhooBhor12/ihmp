@@ -3,17 +3,33 @@ no_ai_planes = {
 	desc = "Disable AI plane production and research"
 
 	enable = {
-		has_game_rule = { rule = AI_PLANES option = BLOCKED }
+		has_game_rule = {
+			rule = AI_PLANES
+			option = BLOCKED
+		}
         NOT = { original_tag = SPR }
+		NOT = { tag = CAN }
+		NOT = { tag = ENG }
+		NOT = { tag = GER }
+		NOT = { tag = USA }
+		NOT = { tag = ITA }
+		NOT = { tag = JAP }
+		NOT = { tag = SOV }
+		NOT = { tag = FRA }
 	}
 
 	abort = {
-		has_game_rule = { rule = AI_PLANES option = ALLOWED }
+		has_game_rule = {
+			rule = AI_PLANES
+			option = ALLOWED
+		}
 	}
+
 	research = {
 		air_equipment = -1000
 		air_doctrine = -1000
 	}
+
     traits = {
         air_warfare_theorist = -1000
         dive_bomber = -1000
@@ -66,7 +82,8 @@ no_ai_planes = {
         air_airborne_1 = -1000
         air_airborne_2 = -1000
         air_airborne_3 = -1000
-    }	
+    }
+
     ideas = {
 		air_warfare_theorist = -1000
         dive_bomber = -1000
@@ -119,5 +136,82 @@ no_ai_planes = {
         air_airborne_1 = -1000
         air_airborne_2 = -1000
         air_airborne_3 = -1000
+	}
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = -1000
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = -1000
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -1000
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = -1000
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = scout_plane
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -1000
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -1000
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = naval_bomber
+		value = -1000
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -1000
 	}
 }
