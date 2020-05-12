@@ -345,7 +345,7 @@ ideas = {
 				modifier = {
 					factor = 1000
 					original_tag = SOV
-					check_variable = { manpower_k < 3000 }
+					check_variable = { manpower_k < 500 }
 				}
 
 			}
