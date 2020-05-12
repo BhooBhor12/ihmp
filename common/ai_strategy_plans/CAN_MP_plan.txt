@@ -4,11 +4,11 @@ CAN_MP_1 = {
 
 	enable = {
 		original_tag = CAN
-			has_game_rule = {
-				rule = CAN_ai_behavior
-				option = CAN_MP_1
-				}
-			}
+		has_game_rule = {
+			rule = CAN_ai_behavior
+			option = CAN_MP_1
+		}
+	}
 
 	abort = {
 	}
@@ -76,12 +76,17 @@ CAN_MP_1 = {
 	}
 
 	ideas = {
-		civilian_economy = 0
 		CAN_r_b_bennett = 1000
 		CAN_harry_crerar = 100
 		canadian_car_foundry = 100
-		free_trade = 10000
+		civilian_economy = 0
+		low_economic_mobilisation = 100
+		partial_economic_mobilisation = 200
+		war_economy = 300
+		free_trade = 100
 		export_focus = 0
+		limited_exports = 0
+		closed_economy = 0
 	}
 
 	traits = {
@@ -124,8 +129,7 @@ CAN_MP_Buildup = {
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		target = 276
-		value = 10
+		value = 30
 	}
 }
 
@@ -173,7 +177,7 @@ CAN_MP_1_LessInfProd = {
 }
 
 CAN_MP_1_NoScreen = {
-	name = "Fighter Production"
+	name = "No Screens"
 	desc = ""
 
 	enable = {
@@ -214,15 +218,20 @@ CAN_MP_1_Fighter_prod = {
 		value = 1000
 	}
 	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 10
+	}
+	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = fighter_equipment
 		value = 100
 	}
 }
 
-CAN_MP_1_NoCAS = {
-	name = "No CAS Production"
-	desc = ""
+CAN_MP_1_NoPlanes = {
+	name = "No Planes Production"
+	desc = "No Plane production beside Fighters"
 
 	enable = {
 		original_tag = CAN
@@ -303,30 +312,6 @@ CAN_MP_Fighter2 = {
 
 }
 
-CAN_MP_Fighter3 = {
-	name = "Research Fighter"
-	desc = ""
-
-	enable = {
-		original_tag = CAN
-		has_game_rule = {
-			rule = CAN_ai_behavior
-			option = CAN_MP_1
-		}
-		has_tech = fighter2
-		NOT = { has_tech = fighter3 }
-	}
-
-	abort = {
-		has_tech = fighter3
-	}
-
-	research = {
-		light_fighter = 1000
-	}
-
-}
-
 No_PP_For_Relation = {
 	name = ""
 	desc = ""
@@ -378,8 +363,8 @@ CAN_MP_No_Generals = {
 	}
 }
 
-CAN_MP_UK_Support = {
-	name = "Befriend UK to accept every request from them"
+CAN_MP_Allies_Support = {
+	name = "Befriend UK and USA to accept every request from them"
 	desc = ""
 
 	enable = {
@@ -403,24 +388,6 @@ CAN_MP_UK_Support = {
 		id = ENG
 		value = 1000
 	}
-
-}
-
-CAN_MP_USA_Support = {
-	name = "Support USA to accept every request from them"
-	desc = ""
-
-	enable = {
-		original_tag = CAN
-		has_game_rule = {
-			rule = CAN_ai_behavior
-			option = CAN_MP_1
-		}
-	}
-
-	abort = {
-	}
-
 	ai_strategy = {
 		type = befriend
 		id = USA

@@ -70,11 +70,13 @@ SAF_MP_1 = {
 	}
 
 	ideas = {
-		SAF_e_g_jansen = 1000
+		SAF_e_g_jansen = 100
 		SAF_nicolaas_havenga = 10
 		SAF_d_f_malan = 0
-		free_trade = 10000
+		free_trade = 100
 		export_focus = 0
+		limited_exports = 0
+		closed_economy = 0
 		SAF_pierre_van_ryneveld = 0
 		generic_light_aircraft_manufacturer = 0
 		generic_medium_aircraft_manufacturer = 0

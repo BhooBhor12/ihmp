@@ -69,7 +69,6 @@ ETH_MP_Subject = {
 		doctrine_effort
 		doctrine_effort_2
 		aviation_effort
-		fighter_focus
 	}
 
 	research = {

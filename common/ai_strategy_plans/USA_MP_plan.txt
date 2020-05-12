@@ -59,7 +59,7 @@ USA_MP_1 = {
 	}
 
 	ideas = {
-		USA_robert_taft = 1000
+		USA_robert_taft = 100
 		partial_economic_mobilisation = 400
 		war_economy = 500
 		USA_henry_morgenthau = 10
@@ -74,7 +74,7 @@ USA_MP_1 = {
 
 	ai_strategy = {
 		type = support
-		id = "ENG"			
+		id = ENG			
 		value = 200
 	}
 
@@ -87,4 +87,50 @@ USA_MP_1 = {
 		}
 	}
 
+}
+
+USA_MP_1_No_IW_Fighter = {
+	name = "No Interwar Fighter Production"
+	desc = ""
+
+	enable = {
+		tag = USA
+		has_game_rule = {
+			rule = USA_ai_behavior
+			option = USA_MP_1
+		}
+		NOT = { has_tech = fighter2 }
+	}
+	abort = {
+		has_tech = fighter2
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -10000
+	}
+}
+
+USA_MP_1_No_IW_Tac = {
+	name = "No Interwar Tac Production"
+	desc = ""
+
+	enable = {
+		tag = USA
+		has_game_rule = {
+			rule = USA_ai_behavior
+			option = USA_MP_1
+		}
+		NOT = { has_tech = tactical_bomber1 }
+	}
+	abort = {
+		has_tech = tactical_bomber1
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -10000
+	}
 }

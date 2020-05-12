@@ -21,24 +21,24 @@ JAP_MP_1 = {
 		#1937
 		JAP_national_defense_state #February 30 1937	
 		JAP_spiritual_mobilization #May 10 1937	
-		JAP_army_expansion_law #July 20 1937	
+		JAP_new_naval_estimates #July 20 1937	
 		JAP_liaison_conference #September 30 1937	
 		JAP_greater_east_asian_co_prosperity_sphere #December 10 1937	
 		#1938
 		JAP_intervene_in_china #February 20 1938	
 		JAP_warrior_spirit #April 30 1938	
-		JAP_new_naval_estimates #July 10 1938	
-		JAP_small_arms_modernization #September 20 1938	
-		JAP_army_expansion 
-		JAP_fighter_modernization
+		JAP_army_expansion_law #July 10 1938	
+		JAP_fighter_modernization #September 20 1938	
+		JAP_agility_focus 
 		#1939
-		JAP_agility_focus
+		JAP_army_expansion
+		JAP_supremacy_of_will
+		JAP_secure_china
 		JAP_carrier_warfare_experiments
-		JAP_cruiser_modernization
-		JAP_long_lance_torpedoes
 		JAP_first_air_fleet		
 		#1940
 		JAP_the_zero
+		JAP_small_arms_modernization
 		JAP_modern_escorts
 		JAP_sign_tripartite_pact
 		JAP_strike_south_doctrine
@@ -166,7 +166,7 @@ JAP_MP_Conquer_China = {
 	}
 }
 
-JAP_MP_Befriend_Germany = {
+JAP_MP_Befriend_Axis = {
 	name = ""
 	desc = ""
 
@@ -187,10 +187,66 @@ JAP_MP_Befriend_Germany = {
 		id = GER
 		value = 200
 	}
+	ai_strategy = {
+		type = befriend
+		id = ITA
+		value = 200
+	}
 }
 
-JAP_MP_Befriend_Italy = {
-	name = ""
+JAP_MP_1_No_IW_Fighter = {
+	name = "No Interwar Fighter Production"
+	desc = ""
+
+	enable = {
+		original_tag = JAP
+		has_game_rule = {
+			rule = JAP_ai_behavior
+			option = JAP_MP_1
+		}
+		NOT = { has_tech = fighter1 }
+	}
+	abort = {
+		has_tech = fighter1
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -10000
+	}
+}
+
+JAP_MP_1_No_IW_Tac = {
+	name = "No Interwar Tac Production"
+	desc = ""
+
+	enable = {
+		original_tag = JAP
+		has_game_rule = {
+			rule = JAP_ai_behavior
+			option = JAP_MP_1
+		}
+		NOT = { has_tech = tactical_bomber1 }
+	}
+	abort = {
+		has_tech = tactical_bomber1
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -10000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = -1000
+	}
+}
+
+JAP_MP_1_No_Bomber = {
+	name = "No Strat. Bomber Production"
 	desc = ""
 
 	enable = {
@@ -202,12 +258,31 @@ JAP_MP_Befriend_Italy = {
 	}
 
 	abort = {
-
 	}
 
 	ai_strategy = {
-		type = befriend
-		id = ITA
-		value = 200
+		type = equipment_production_factor
+		id = cas
+		value = -10000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -10000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -10000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = scout_plane
+		value = -1000
 	}
 }

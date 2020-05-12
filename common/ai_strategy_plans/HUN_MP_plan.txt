@@ -29,10 +29,11 @@ HUN_MP_1 = {
 		HUN_announce_the_gyor_program
 		HUN_domestic_arms_industry
 		HUN_aeronautic_technology_institute
-		HUN_secret_rearmament
-		HUN_theoretical_air_efforts
-		HUN_bled_agreement
 		HUN_boost_hungarian_aviation_industry
+		HUN_secret_rearmament
+		HUN_war_games
+		#HUN_theoretical_air_efforts
+		HUN_bled_agreement
 		HUN_establish_the_air_force
 		HUN_indigenous_designs
 		HUN_light_fighter_effort
@@ -50,7 +51,7 @@ HUN_MP_1 = {
 
 	ideas = {
 		HUN_zoltan_tildy = 100
-		free_trade = 15000
+		free_trade = 150
 		export_focus = 0
 		limited_exports = 0
 		closed_economy = 0
@@ -58,7 +59,10 @@ HUN_MP_1 = {
 		HUN_mavag = 10
 		HUN_shvoy_kalman = -100
 		HUN_gyorgy_jendrassik = 3
-		war_economy = 100
+		civilian_economy = 0
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 0
+		war_economy = 1
 		limited_conscription = 10
 		extensive_conscription = 20
 	}
@@ -115,10 +119,11 @@ HUN_MP_2 = {
 		HUN_announce_the_gyor_program
 		HUN_domestic_arms_industry
 		HUN_aeronautic_technology_institute
-		HUN_secret_rearmament
-		HUN_theoretical_air_efforts
-		HUN_bled_agreement
 		HUN_boost_hungarian_aviation_industry
+		HUN_secret_rearmament
+		HUN_war_games
+		#HUN_theoretical_air_efforts
+		HUN_bled_agreement
 		HUN_establish_the_air_force
 		HUN_indigenous_designs
 		HUN_light_fighter_effort
@@ -138,7 +143,7 @@ HUN_MP_2 = {
 
 	ideas = {
 		HUN_zoltan_tildy = 100
-		free_trade = 15000
+		free_trade = 150
 		export_focus = 0
 		limited_exports = 0
 		closed_economy = 0
@@ -146,8 +151,12 @@ HUN_MP_2 = {
 		HUN_mavag = 10
 		HUN_shvoy_kalman = -100
 		HUN_gyorgy_jendrassik = 3
-		war_economy = 100
-		extensive_conscription = 10
+		civilian_economy = 0
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 0
+		war_economy = 1
+		limited_conscription = 80
+		extensive_conscription = 100
 	}
 
 	ai_strategy = {
@@ -178,7 +187,7 @@ HUN_MP_Alliance = {
 	desc = ""
 
 	enable = {
-		original_tag = HUN
+		tag = HUN
 		OR = {
 			has_game_rule = {
 				rule = HUN_ai_behavior
@@ -195,25 +204,68 @@ HUN_MP_Alliance = {
 	}
 
 	ai_strategy = {
+		type = befriend
+		id = "GER"			
+		value = 200
+	}
+	ai_strategy = {
 		type = alliance
-		id = GER
+		id = "GER"			
 		value = 400
 	}
+	ai_strategy = {
+		type = support
+		id = "GER"
+		value = 200
+	}	
 	ai_strategy = {
 		type = prepare_for_war
 		id = ENG
 		value = 200
 	}
 	ai_strategy = {
-		type = dont_join_wars_with
-		id = ITA
-		target_country = YUG
-		value = 500
+		type = pp_spend_priority
+		id = relation	
+		value = -200
 	}
+}
+
+HUN_MP_Infrastructure_1 = {
+	name = "Aluminium in Northern Hungary"
+	desc = "Build Level 10 Infrastructure for Aluminium"
+
+	enable = {
+		tag = HUN
+		has_completed_focus = HUN_reintegrate_the_railroads
+		OR = {
+			has_game_rule = {
+				rule = HUN_ai_behavior
+				option = HUN_MP_1
+			}
+			has_game_rule = {
+				rule = HUN_ai_behavior
+				option = HUN_MP_2
+			}
+		}
+		43 = {
+			is_controlled_by = HUN
+			infrastructure < 10
+		}
+	}
+
+	abort = {
+		43 = {
+			OR ={
+				NOT = { is_controlled_by = HUN }
+				NOT = { infrastructure < 10 }
+			}
+		}
+	}
+
 	ai_strategy = {
-		type = dont_join_wars_with
-		id = ITA
-		target_country = GRE
-		value = 500
+		type = build_building
+		id = infrastructure
+		target = 43
+		value = 10
 	}
 }

@@ -3,12 +3,12 @@ SOV_MP_1 = {
 	desc = "Collectivism"
 
 	enable = {
-		original_tag = SOV
-			has_game_rule = {
-				rule = SOV_ai_behavior
-				option = SOV_MP_1
-				}
-			}
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+	}
 
 	abort = {
 	}
@@ -39,20 +39,62 @@ SOV_MP_1 = {
 		#1940
 		SOV_socialist_realism
 		SOV_transpolar_flights
-		SOV_women_pilots
 		SOV_smersh
 	}
 	
 	focus_factors = {
+		SOV_women_pilots = 0
+		SOV_ocean_going_navy = 0
 		SOV_peoples_commissariat = 0
+		SOV_partisan_suppression = 0
 	}
 
 	research = {
-
+		armor = -1000
+		cat_medium_armor = 1000
+		cat_anti_tank = -10000
 	}
 
 	ideas = {
-		war_economy = 1000
+		civilian_economy = 0
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 0
+		war_economy = 10
+		tot_economic_mobilisation = 100
+		SOV_nikolai_voznesensky = 20
+		mikhail_kalinin = 10
+		alexander_kerensky = 0
+		konstantin_rodzaevsky = 0
+		SOV_nikolai_yezhov = 0
+		SOV_lavrentiy_beria = 0
+		SOV_vyacheslav_molotov = 0
+		leningrad_polytechnical_institute = 0
+		nevskoye_design_bureau = 0
+		sergey_gorshkov = 0
+		vladimir_tributs = 0
+		sergei_rudenko = 0
+		alexander_golovanov = 0
+		igor_kurchatov = 0
+		sergei_korolev = 0
+		#aircraft designer
+		yakovlev_design_bureau = 0
+		tupolev_design_bureau = 0
+		ilyushin_design_bureau = 0
+		morozov_design_bureau = 0
+		#high command
+		pavel_zhigarev = 0
+		sergei_khudyakov = 0
+		vladimir_kasatonov = 0
+		gordey_levchenko = 0
+		arseniy_golovko = 0
+		pyotr_smirnov = 0
+		mikhail_frinovsky = 0
+		nikolay_kuznetsov = 0
+		ivan_yumashev = 0
+		astrov_design_bureau = 3
+		okmo = 3
+		mig_design_bureau = 3
+		stalingrad_tractor_factory = 3
 	}
 
 	traits = {
@@ -73,12 +115,90 @@ SOV_MP_1 = {
 
 }
 
-SOV_MP_1_CivBuildup = {
-	name = "Sovjet Civ Buildup"
+SOV_MP_1_Claims_1 = {
+	name = "Conquer Finland"
 	desc = ""
 
 	enable = {
-		original_tag = SOV
+		tag = SOV
+		has_global_flag = sov_yes_pact
+		FIN = { owns_state = 146 }
+	}
+	abort = {
+		SOV = { owns_state =  146 }
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = FIN
+		value = 400
+	}
+	ai_strategy = {
+		type = antagonize
+		id = FIN
+		value = 400
+	}
+}
+
+SOV_MP_1_Claims_2 = {
+	name = "Annex Baltics"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_global_flag = sov_yes_pact
+		OR = {
+			country_exists = EST
+			country_exists = LAT
+			country_exists = LIT
+		}
+	}
+	abort = {
+		NOT = {
+			country_exists = EST
+			country_exists = LAT
+			country_exists = LIT
+		}
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = EST
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = EST
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = LAT
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = LAT
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = LIT
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = LIT
+		value = 200
+	}
+}
+
+SOV_MP_1_CivBuildup = {
+	name = "Soviet Civ Buildup"
+	desc = ""
+
+	enable = {
+		tag = SOV
 		has_game_rule = {
 			rule = SOV_ai_behavior
 			option = SOV_MP_1
@@ -88,12 +208,387 @@ SOV_MP_1_CivBuildup = {
 	abort_when_not_enabled = yes
 
 	ideas = {
+		disarmed_nation = 0
+		volunteer_only = 0
+		extensive_conscription = 0
 		service_by_requirement = 0
+		massive_draft = 0
+		all_adults_serve = 0
+		scraping_the_barrel = 0
 	}
 	
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
 		value = 100
+	}
+}
+
+SOV_MP_1_Trade_Peace = {
+	name = "Soviet Trade in Peacetime"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		date < 1940.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ideas = {
+		free_trade = 100
+		export_focus = 0
+		limited_exports = 0
+		closed_economy = 0
+	}
+}
+
+SOV_MP_1_Trade_War = {
+	name = "Soviet Trade in Wartime"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		OR = {
+			date > 1940.1.1
+			has_war = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ideas = {
+		free_trade = 0
+		export_focus = 0
+		limited_exports = 100
+		closed_economy = 0
+	}
+}
+
+SOV_MP_1_LARM2 = {
+	name = "Research Light Tank 2"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		NOT = { has_tech = improved_light_tank }
+	}
+
+	abort = {
+		OR = {
+			has_tech = improved_light_tank
+			is_researching_technology = improved_light_tank
+		}
+	}
+
+	research = {
+		cat_light_armor = 10000
+	}
+}
+
+SOV_MP_1_MARM1 = {
+	name = "Research MARM1"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		NOT = { has_tech = basic_medium_tank }
+		OR = {
+			has_tech_bonus = { technology = basic_medium_tank }
+			date > 1937.6.1
+		}
+	}
+
+	abort = {
+		has_tech = basic_medium_tank
+	}
+
+	research = {
+		cat_medium_armor = 10000
+		cat_heavy_armor = -10000
+	}
+}
+
+SOV_MP_1_MARM2 = {
+	name = "Research MARM2"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		NOT = { has_tech = improved_medium_tank }
+		OR = {
+			has_tech_bonus = { technology = improved_medium_tank }
+			date > 1939.6.1
+		}
+	}
+
+	abort = {
+		OR = {
+			has_tech = improved_medium_tank
+			is_researching_technology = improved_medium_tank
+		}
+	}
+
+	research = {
+		cat_medium_armor = 10000
+	}
+}
+
+SOV_MP_1_MARM3 = {
+	name = "Research MARM3"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		NOT = { has_tech = advanced_medium_tank }
+		OR = {
+			has_completed_focus = SOV_lessons_of_war
+			date > 1941.6.1
+		}
+	}
+
+	abort = {
+		OR = {
+			has_tech = advanced_medium_tank
+			is_researching_technology = advanced_medium_tank
+		}
+	}
+
+	research = {
+		cat_medium_armor = 10000
+	}
+}
+
+SOV_MP_MARM_Production = {
+	name = "Produce MARM no LARM"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		has_tech = improved_medium_tank
+	}
+
+	abort = {
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = -50
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = infantry_equipment
+		value = -50
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_equipment
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 100
+	}
+}
+
+SOV_MP_AA_Research = {
+	name = "Research AA2"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		NOT = { has_tech = antiair2 }
+	}
+
+	abort = {
+		OR = {
+			has_tech = antiair2
+			is_researching_technology = antiair2
+		}
+		
+	}
+
+	research = {
+		artillery = 1000
+	}
+}
+
+SOV_MP_1_No_IW_Fighter = {
+	name = "No Interwar Fighter Production"
+	desc = ""
+
+	enable = {
+		original_tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		NOT = { has_tech = fighter2 }
+	}
+	abort = {
+		has_tech = fighter2
+	}
+	
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = fighter_equipment
+		value = -1000
+	}
+}
+
+SOV_MP_1_Fighter2 = {
+	name = "Research Fighter2"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		NOT = { has_tech = fighter2 }
+		date > 1939.1.1
+	}
+
+	abort = {
+		OR = {
+			has_tech = fighter2
+			is_researching_technology = fighter2
+		}
+	}
+
+	research = {
+		light_fighter = 10000
+	}
+}
+
+SOV_MP_F2_Production = {
+	name = "Produce Fighter2"
+	desc = ""
+
+	enable = {
+		tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		has_tech = fighter2
+	}
+
+	abort = {
+	}
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 100
+	}
+}
+
+SOV_MP_1_No_Strat = {
+	name = "No Strat. Bomber Production"
+	desc = ""
+
+	enable = {
+		original_tag = SOV
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+	}
+
+	abort = {
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = tac_bomber_equipment
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = -1000
+	}	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = scout_plane
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = screen_ship
+		value = -100
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = submarine
+		value = -100
 	}
 }

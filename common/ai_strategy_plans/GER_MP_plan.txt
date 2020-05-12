@@ -1,9 +1,9 @@
 GER_MP_1 = {
-	name = "GER_MP_1"
-	desc = "RULE_GER_MP_1_DESC"
+	name = "GER MP 1"
+	desc = ""
 
 	enable = {
-		original_tag = GER
+		tag = GER
 		has_game_rule = {
 			rule = GER_ai_behavior
 			option = GER_MP_1
@@ -26,18 +26,18 @@ GER_MP_1 = {
 		GER_army_innovation
 		GER_soviet_treaty
 		#1938
-		GER_army_innovation_2
 		GER_anschluss
 		GER_demand_sudetenland
 		GER_first_vienna_award
 		GER_end_of_czechoslovakia
-		#1939
 		GER_demand_memel
+		#1939
 		GER_west_wall
 		GER_mol_rib_pact
 		GER_danzig_or_war
-		#1940
 		GER_around_maginot
+		GER_army_innovation_2
+		#1940
 		GER_coal_liquidization
 		GER_synthetic_rubber
 		GER_weserubung
@@ -58,15 +58,21 @@ GER_MP_1 = {
 		infantry_tech = 15.0
 		artillery = 8.0
 		support_tech = 6.5
+		armor = -1000
+		cat_medium_armor = 2000
 	}
 
 	ideas = {
+		civilian_economy = 0
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 0
+		war_economy = 0
 		hjalmar_schacht = 60
-		heinrich_himmler = -100
+		heinrich_himmler = 0
 		martin_bormann = 100
 		walther_funk = 20
 		joseph_goebbels = 30
-		rudolf_hess = -100
+		rudolf_hess = 0
 		messerschmitt = 5
 		krupp = 25
 		goering = 0.5
@@ -144,12 +150,12 @@ GER_MP_Alliance = {
 
 	ai_strategy = {
 		type = alliance
-		id = "HUN"
+		id = HUN
 		value = 400
 	}
 	ai_strategy = {
 		type = alliance
-		id = "ROM"
+		id = ROM
 		value = 400
 	}
 	ai_strategy = {
@@ -162,10 +168,15 @@ GER_MP_Alliance = {
 		id = JAP
 		value = 200
 	}
+	ai_strategy = {
+		type = alliance
+		id = YUG
+		value = -200
+	}
 }
 
 Do_Befriend_But_No_PP = {
-	name = ""
+	name = "No PP for Relations"
 	desc = ""
 
 	enable = {
@@ -184,4 +195,56 @@ Do_Befriend_But_No_PP = {
 		id = relation	
 		value = -200
 	}	
+}
+
+GER_MP_1_Fighter2 = {
+	name = "Research Fighter2"
+	desc = ""
+
+	enable = {
+		tag = GER
+		has_game_rule = {
+			rule = GER_ai_behavior
+			option = GER_MP_1
+		}
+		NOT = { has_tech = fighter2 }
+		date > 1938.6.1
+	}
+
+	abort = {
+		OR = {
+			has_tech = fighter2
+			is_researching_technology = fighter2
+		}
+	}
+
+	research = {
+		light_fighter = 100000
+	}
+}
+
+GER_MP_1_MARM = {
+	name = "Research MARM"
+	desc = ""
+
+	enable = {
+		tag = GER
+		has_game_rule = {
+			rule = GER_ai_behavior
+			option = GER_MP_1
+		}
+		NOT = { has_tech = advanced_medium_tank }
+		has_completed_focus = GER_army_innovation_2
+	}
+
+	abort = {
+		OR = {
+			has_tech = advanced_medium_tank
+			is_researching_technology = advanced_medium_tank
+		}
+	}
+
+	research = {
+		cat_medium_armor = 100000
+	}
 }

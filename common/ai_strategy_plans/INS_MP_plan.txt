@@ -45,7 +45,10 @@ INS_MP_1 = {
 	}
 
 	ideas = {
-		free_trade = 100000
+		free_trade = 100
+		export_focus = 0
+		limited_exports = 0
+		closed_economy = 0
 		generic_captain_of_industry = 10
 		generic_fortification_engineer = 2
 		war_economy = 20

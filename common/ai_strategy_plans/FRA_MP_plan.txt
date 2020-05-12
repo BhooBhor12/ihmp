@@ -1,12 +1,114 @@
 FRA_MP_1 = {
 	name = "France Multiplayer 1"
-	desc = "Revive the National Bloc"
+	desc = "Form the Popular Front"
 
 	enable = {
 		original_tag = FRA
 			has_game_rule = {
 				rule = FRA_ai_behavior
 				option = FRA_MP_1
+			}	
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		FRA_form_the_popular_front
+		FRA_reform_the_labour_laws
+		FRA_review_foreign_policy
+		FRA_buy_time
+		FRA_strengthen_government_support
+		#1937
+		FRA_defensive_strategems
+		FRA_begin_rearmament
+		FRA_nationalize_key_industry
+		FRA_form_the_state_arsenals
+		FRA_ban_the_leagues
+		#1938
+		FRA_defensive_focus
+		FRA_firepower_kills
+		FRA_infantry_focus
+		FRA_artillery_focus
+		FRA_heavy_armor_focus
+		#1939
+		FRA_army_reform
+		FRA_go_with_britain
+		FRA_the_blum_viollette_proposal
+		FRA_expand_the_citizenship
+		FRA_encourage_immigration
+		#1940
+		FRA_devalue_the_franc
+		FRA_invest_in_the_colonies
+		FRA_algerie_france
+		FRA_invest_in_west_africa
+		FRA_invest_in_syria
+		#1941
+		FRA_colonial_industry
+		FRA_extra_research_slot_2
+		FRA_invest_in_the_metropole
+		FRA_industrial_expansion
+		FRA_extra_research_slot
+		#1942
+		
+		
+		 
+		
+	}
+
+	research = {
+		synth_resources = -1000
+		air_doctrine = -1000
+		naval_equipment = -1000
+		naval_doctrine = -1000
+	}
+
+	ideas = {
+		free_trade = 0
+		export_focus = 600
+		limited_exports = 0
+		closed_economy = 0
+		war_economy = 200
+		partial_economic_mobilisation = 100
+		FRA_gaston_henry_haye = 1000
+		henri_giraud = 30
+		maxime_weygand = 20
+		FRA_zivony_peshkov = 20
+		FRA_paul_baudouin = 0
+		FRA_charles_tillon = 0
+		charles_de_gaulle = 0
+		louis_kahn = 0
+		jean_decoux = 0
+		victor_denain = 0
+		jean_marie_bergeret = 0
+		frederic_irene_joliot_curie = 0
+		georges_bonnet = 0
+		FRA_panhard = 0
+		FRA_roger_salengro = 0
+	}
+
+	ai_strategy = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FRA_MP_2 = {
+	name = "France Multiplayer 1"
+	desc = "Revive the National Bloc"
+
+	enable = {
+		original_tag = FRA
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = FRA_MP_2
 			}	
 	}
 
@@ -62,6 +164,10 @@ FRA_MP_1 = {
 	}
 
 	ideas = {
+		free_trade = 0
+		export_focus = 600
+		limited_exports = 0
+		closed_economy = 0
 		war_economy = 200
 		partial_economic_mobilisation = 100
 		FRA_gaston_henry_haye = 1000
@@ -76,6 +182,9 @@ FRA_MP_1 = {
 		victor_denain = 0
 		jean_marie_bergeret = 0
 		frederic_irene_joliot_curie = 0
+		georges_bonnet = 0
+		FRA_panhard = 0
+		FRA_roger_salengro = 0
 	}
 
 	ai_strategy = {
@@ -90,103 +199,6 @@ FRA_MP_1 = {
 			factor = 1.0
 		}
 	}
-
-}
-
-FRA_MP_2 = {
-	name = "France Multiplayer 2"
-	desc = "Form the Popular Front"
-
-	enable = {
-		original_tag = FRA
-			has_game_rule = {
-				rule = FRA_ai_behavior
-				option = FRA_MP_2
-			}	
-	}
-
-	abort = {
-	}
-
-	ai_national_focuses = {
-		FRA_form_the_popular_front
-		FRA_reform_the_labour_laws
-		FRA_review_foreign_policy
-		FRA_buy_time
-		FRA_strengthen_government_support
-		#1937
-		FRA_defensive_strategems
-		FRA_ban_the_leagues
-		FRA_begin_rearmament
-		FRA_nationalize_key_industry
-		FRA_form_the_state_arsenals
-		#1938
-		FRA_defensive_focus
-		FRA_firepower_kills
-		FRA_infantry_focus
-		FRA_artillery_focus
-		FRA_heavy_armor_focus
-		#1939
-		FRA_army_reform
-		FRA_go_with_britain
-		FRA_the_blum_viollette_proposal
-		FRA_expand_the_citizenship
-		FRA_encourage_immigration
-		#1940
-		FRA_devalue_the_franc
-		FRA_invest_in_the_colonies
-		FRA_algerie_france
-		FRA_invest_in_west_africa
-		FRA_invest_in_syria
-		#1941
-		FRA_colonial_industry
-		FRA_extra_research_slot_2
-		FRA_invest_in_the_metropole
-		FRA_industrial_expansion
-		FRA_extra_research_slot
-		#1942
-		
-		
-		 
-		
-	}
-
-	research = {
-		synth_resources = -1000
-		air_doctrine = -1000
-		naval_equipment = -1000
-		naval_doctrine = -1000
-	}
-
-	ideas = {
-		war_economy = 200
-		partial_economic_mobilisation = 100
-		FRA_gaston_henry_haye = 1000
-		henri_giraud = 30
-		maxime_weygand = 20
-		FRA_zivony_peshkov = 20
-		FRA_paul_baudouin = 0
-		FRA_charles_tillon = 0
-		charles_de_gaulle = 0
-		louis_kahn = 0
-		jean_decoux = 0
-		victor_denain = 0
-		jean_marie_bergeret = 0
-		frederic_irene_joliot_curie = 0
-	}
-
-	ai_strategy = {
-	}
-
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-
 }
 
 FRA_MP_Advisors = {
@@ -238,6 +250,7 @@ FRA_MP_Advisors = {
 		rene_emile_godfroy = 0
 		renault_fra = 0
 		FRA_AMX = 0
+		FRA_APX = 0
 		somua = 0
 		mas = 0
 		schneider = 0
@@ -246,7 +259,14 @@ FRA_MP_Advisors = {
 		amiot = 0
 		levasseur = 0
 		fcm = 0
+		aeb = 0
+		acl = 0
+		acf = 0
 		famh = 0
+		FRA_vincent_auriol = 0
+		FRA_pierre_pucheu = 0
+		FRA_maurice_gauche = 0
+		generic_head_of_intelligence = 0
 	}
 	
 	ai_strategy = {
@@ -262,8 +282,8 @@ FRA_MP_Advisors = {
 	}
 }
 
-FRA_MP_NoBomber = {
-	name = "No Bomber Production"
+FRA_MP_NoPlanes = {
+	name = "No Plane Production"
 	desc = ""
 
 	enable = {
@@ -284,10 +304,14 @@ FRA_MP_NoBomber = {
 	}
 
 	ai_strategy = {
+		type = air_factory_balance
+		value = -10000
+	}
+	ai_strategy = {
 		type = equipment_production_factor
 		id = fighter
 		value = -10000
-	}	
+	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = cas
@@ -307,6 +331,61 @@ FRA_MP_NoBomber = {
 		type = equipment_production_factor
 		id = strategic_bomber
 		value = -10000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = scout_plane
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = screen_ship
+		value = -100
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = submarine
+		value = -100
 	}
 }
 
@@ -393,6 +472,11 @@ FRA_MP_AT_Production = {
 		id = anti_tank
 		value = 200
 	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = -50
+	}
 
 }
 
@@ -429,35 +513,6 @@ FRA_MP_InfEquip_LessProduction = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = infantry
-		value = -50
-	}
-}
-
-FRA_MP_AT_MoreProduction = {
-	name = "Produce Less Armor"
-	desc = ""
-
-	enable = {
-		original_tag = FRA
-		OR = {
-			has_game_rule = {
-				rule = FRA_ai_behavior
-				option = FRA_MP_1
-			}
-			has_game_rule = {
-				rule = FRA_ai_behavior
-				option = FRA_MP_2
-			}
-		}
-		has_tech = antitank2
-	}
-
-	abort = {
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = armor
 		value = -50
 	}
 }

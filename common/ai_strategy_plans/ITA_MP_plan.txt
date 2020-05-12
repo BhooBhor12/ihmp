@@ -66,9 +66,16 @@ ITA_MP_1 = {
 	}
 
 	ideas = {
-		war_economy = 1000
-		ITA_luigi_einaudi = 200
-		macchi = 150
+		civilian_economy = 0
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 0
+		war_economy = 1
+		free_trade = 0
+		export_focus = 0
+		limited_exports = 100
+		closed_economy = 0
+		ITA_luigi_einaudi = 20
+		macchi = 50
 		danieli = 50
 		rodolfo_graziani = 0
 	}
@@ -162,6 +169,29 @@ ITA_MP_1_Fighter3 = {
 
 }
 
+ITA_MP_1_No_IW_Fighter = {
+	name = "No Interwar Fighter Production"
+	desc = ""
+
+	enable = {
+		original_tag = ITA
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_MP_1
+		}
+		NOT = { has_tech = fighter2 }
+	}
+	abort = {
+		has_tech = fighter2
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -10000
+	}
+}
+
 ITA_MP_1_NoBombers = {
 	name = "Produce no Bombers"
 	desc = ""
@@ -210,7 +240,7 @@ ITA_MP_1_CivBuildup = {
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 80
+		value = 50
 	}
 }
 

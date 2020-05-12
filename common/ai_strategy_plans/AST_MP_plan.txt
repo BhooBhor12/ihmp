@@ -78,10 +78,13 @@ AST_MP_1 = {
 	}
 
 	ideas = {
-	AST_herbert_v_evatt = 1000
-	partial_economic_mobilisation = 100000
-	bhp_steel = 10
-	free_trade = 10000
+		AST_herbert_v_evatt = 600
+		partial_economic_mobilisation = 600
+		bhp_steel = 10
+		free_trade = 600
+		export_focus = 0
+		limited_exports = 0
+		closed_economy = 0
 	}
 
 	traits = {

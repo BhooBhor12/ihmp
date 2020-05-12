@@ -25,18 +25,18 @@ SIA_MP_1 = {
 		political_effort
 		collectivist_ethos
 		nationalism_focus
-		aviation_effort_2
 		militarism
 		production_effort
 		production_effort_2
 		production_effort_3
+		aviation_effort
+		fighter_focus
+		aviation_effort_2
 		military_youth
 		paramilitarism
 		ideological_fanaticism
 		technology_sharing
 		naval_effort
-		aviation_effort
-		fighter_focus
 	}
 
 	research = {
@@ -47,16 +47,18 @@ SIA_MP_1 = {
 	}
 
 	ideas = {
-		SIA_kuang_abhayavongsa = 1000
-		SIA_phot_bhahalyodin = -1000
-		partial_economic_mobilisation = 50
+		SIA_kuang_abhayavongsa = 100
+		SIA_phot_bhahalyodin = 0
+		partial_economic_mobilisation = 25
 		war_economy = 100
-		generic_light_aircraft_manufacturer = 500
+		generic_light_aircraft_manufacturer = 5
+		free_trade = 100
 		export_focus = 0
-		free_trade = 1000
+		limited_exports = 0
+		closed_economy = 0
 		generic_electronics_concern = 0
 		extensive_conscription = 10
-		SIA_manphya_khanphialong = 0
+		SIA_manphya_khanphialong = 1
 		SIA_sawat_phutianands = 0
 	}
 	
@@ -225,6 +227,7 @@ SIA_MP_No_Mil_4 = {
 			option = SIA_MP_1
 		}
 		has_completed_focus = production_effort_3
+		date < 1942.6.1
 	}
 
 	abort = {

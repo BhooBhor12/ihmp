@@ -57,10 +57,15 @@ ENG_MP_1 = {
 	}
 
 	ideas = {
-		ENG_philip_kerr = 1000
-		low_economic_mobilisation = 300
-		partial_economic_mobilisation = 400
-		war_economy = 500
+		ENG_philip_kerr = 100
+		free_trade = 0
+		export_focus = 600
+		limited_exports = 0
+		closed_economy = 0
+		civilian_economy = 0
+		low_economic_mobilisation = 100
+		partial_economic_mobilisation = 200
+		war_economy = 400
 		harold_alexander = 10
 		supermarine = 5
 	}
@@ -93,5 +98,151 @@ ENG_MP_AirDoctrine = {
 	
 	research = {
 		cat_strategic_destruction = -1000
+	}
+}
+
+ENG_MP_Buildup = {
+	name = ""
+	desc = ""
+
+	enable = {
+		tag = ENG
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		date < 1938.1.1
+	}
+
+	abort = {
+		date > 1938.1.1 
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 80
+	}
+}
+
+ENG_MP_1_No_IW_Fighter = {
+	name = "No Interwar Fighter Production"
+	desc = ""
+
+	enable = {
+		original_tag = ENG
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		NOT = { has_tech = fighter1 }
+	}
+	abort = {
+		has_tech = fighter1
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = fighter_equipment
+		value = -1000
+	}
+}
+
+ENG_MP_1_Fighter2 = {
+	name = "Research Fighter2"
+	desc = ""
+
+	enable = {
+		tag = ENG
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		NOT = { has_tech = fighter3 }
+		OR = {
+			date > 1938.6.1
+			has_completed_focus = fighter_command_focus
+		}
+	}
+
+	abort = {
+		OR = {
+			has_tech = fighter3
+			is_researching_technology = fighter3
+		}
+	}
+
+	research = {
+		light_fighter = 10000
+	}
+}
+
+ENG_MP_1_No_IW_Tac = {
+	name = "No Interwar Tac Production"
+	desc = ""
+
+	enable = {
+		original_tag = ENG
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		NOT = { has_tech = tactical_bomber1 }
+	}
+	abort = {
+		has_tech = tactical_bomber1
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -10000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = -1000
+	}
+}
+
+ENG_MP_1_No_Strat = {
+	name = "No Strat. Bomber Production"
+	desc = ""
+
+	enable = {
+		original_tag = ENG
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+	}
+
+	abort = {
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -10000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -10000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -1000
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = scout_plane
+		value = -1000
 	}
 }

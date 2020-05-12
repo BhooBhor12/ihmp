@@ -50,9 +50,9 @@ POL_MP_1 = {
 
 	ideas = {
 		civilian_economy = 0
-		low_economic_mobilisation = 100
-		partial_economic_mobilisation = 200
-		war_economy = 300
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 400
+		war_economy = 600
 		limited_conscription = 1
 		POL_tomislaw_lupaszko = 10
 		POL_jozef_haller = 40
@@ -64,6 +64,7 @@ POL_MP_1 = {
 		POL_jozef_zajac = 0
 		POL_lrl = 0
 		POL_ava = 0
+		POL_wladyslaw_anders = 0
 	}
 
 	traits = {
@@ -100,6 +101,11 @@ POL_MP_Template = {
 	}
 
 	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
 		type = template_prio
 		id = infantry
 		value = 40
@@ -109,10 +115,71 @@ POL_MP_Template = {
 		id = garrison
 		value = -40
 	}
+}
+
+POL_MP_AA_Production = {
+	name = "Produce Anti-Air Guns"
+	desc = ""
+
+	enable = {
+		tag = POL
+		has_game_rule = {
+			rule = POL_ai_behavior
+			option = POL_MP_1
+		}
+		has_tech = interwar_antiair
+	}
+
+	abort = {
+	}
+
 	ai_strategy = {
-		type = prepare_for_war
-		id = GER	
-		value = 200
+		type = equipment_variant_production_factor
+		id = infantry_equipment
+		value = -75
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = anti_air_equipment
+		value = 150
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = support_equipment
+		value = -20
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = artillery_equipment
+		value = -50
+	}
+}
+
+POL_MP_ForceUnits = {
+	name = "Force Build Units"
+	desc = ""
+
+	enable = {
+		tag = POL
+		has_game_rule = {
+			rule = POL_ai_behavior
+			option = POL_MP_1
+		}
+		date > 1938.6.1
+		has_manpower > 200000
+		GER = { has_capitulated = no }
+	}
+
+	abort = {
+		OR = {
+			POL = { has_manpower < 200000 }
+			GER = { has_capitulated = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = force_build_armies
+		value = 1
 	}
 }
 
@@ -225,63 +292,6 @@ POL_MP_Arty = {
 	}
 }
 
-POL_MP_AA_Production = {
-	name = "Produce Anti-Air Guns"
-	desc = ""
-
-	enable = {
-		tag = POL
-		has_game_rule = {
-			rule = POL_ai_behavior
-			option = POL_MP_1
-		}
-		has_tech = antiair1
-	}
-
-	abort = {
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = anti_air
-		value = 200
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = infantry
-		value = -1000
-	}
-
-}
-
-POL_MP_ForceUnits = {
-	name = "Force Build Units"
-	desc = ""
-
-	enable = {
-		tag = POL
-		has_game_rule = {
-			rule = POL_ai_behavior
-			option = POL_MP_1
-		}
-		date > 1938.6.1
-		has_manpower > 200000
-		GER = { has_capitulated = no }
-	}
-
-	abort = {
-		OR = {
-			POL = { has_manpower < 200000 }
-			GER = { has_capitulated = yes }
-		}
-	}
-
-	ai_strategy = {
-		type = force_build_armies
-		value = 100
-	}
-}
-
 POL_MP_No_Generals = {
 	name = "No Generals"
 	desc = ""
@@ -350,46 +360,55 @@ POL_MP_1_AirUnits = {
 		naval_equipment = -1000
 		naval_doctrine = -1000
 	}
-	
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = -1000
+	}
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
-		value = -1000000
+		value = -1000
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = fighter
-		value = -1000000
+		value = -1000
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = fighter_equipment
-		value = -1000000
+		value = -1000
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = cas
-		value = -10000
+		value = -1000
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = naval_bomber
-		value = -10000
+		value = -1000
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = tactical_bomber
-		value = -10000
+		value = -1000
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = strategic_bomber
-		value = -10000
+		value = -1000
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = screen_ship
-		value = -1000
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = screen_ship
+		value = -100
 	}
 }
 
@@ -407,7 +426,22 @@ POL_MP_Antagonize = {
 
 	abort = {
 	}
-	
+
+	ai_strategy = {
+		type = antagonize
+		id = GER
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = GER	
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = ITA
+		value = 200
+	}
 	ai_strategy = {
 		type = antagonize
 		id = JAP
@@ -455,10 +489,6 @@ MP_Spy_Defense = {
 	abort = {
 	}
 
-	ai_strategy = {
-		type = intelligence_agency_usable_factories
-		value = 5
-	}
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
 		value = 5

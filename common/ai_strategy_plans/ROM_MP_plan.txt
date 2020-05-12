@@ -3,13 +3,13 @@ ROM_MP_1 = {
 	desc = ""
 
 	enable = {
-		original_tag = ROM
+		tag = ROM
 		has_dlc = "Death or Dishonor"
 		has_game_rule = {
 			rule = ROM_ai_behavior
 			option = ROM_MP_1
-				}
-			}
+		}
+	}
 
 	abort = {
 		
@@ -67,11 +67,13 @@ ROM_MP_1 = {
 		ROM_nicolae_malaxa = 15
 		ROM_ROMLOC = 10
 		ROM_mihail_sturdza = 2
-		ROM_armand_calinescu = -1000
-		ROM_iuliu_maniu = -1000
-		partial_economic_mobilisation = 1000
-		war_economy = 2000
-		free_trade = 10000
+		ROM_armand_calinescu = 0
+		ROM_iuliu_maniu = 0
+		civilian_economy = 0
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 50
+		war_economy = 200
+		free_trade = 200
 		export_focus = 0
 		limited_exports = 0
 		closed_economy = 0
@@ -157,6 +159,11 @@ ROM_MP_1_Alliance = {
 		type = prepare_for_war
 		id = ENG
 		value = 200
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation	
+		value = -200
 	}
 }
 
