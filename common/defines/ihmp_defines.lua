@@ -215,6 +215,7 @@ NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 10		-- was 100
 
 NDefines.NNavy.CAPITAL_ONLY_COMBAT_ACTIVATE_TIME = 8                          -- was 4 hours from start of combat when only carriers, capitals and subs get to attack
 
+NDefines.NNavy.EXPERIENCE_FACTOR_CARRIER_GAIN = 0.04		-- was 0.08					-- Xp gain by carrier ships in the combat
 
 NDefines.NNavy.CONVOY_EFFICIENCY_LOSS_MODIFIER = 0.8						-- was 1.25	-- How much efficiency drops when losing convoys. If modifier is 0.5, then losing 100% of convoys in short period, the efficiency will drop by 50%.
 NDefines.NNavy.CONVOY_EFFICIENCY_REGAIN_AFTER_DAYS = 2						-- was 7 -- Convoy starts regaining it's efficiency after X days without any convoys being sink.
