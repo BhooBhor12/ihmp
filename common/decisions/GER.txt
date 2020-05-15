@@ -401,16 +401,16 @@ GER_case_anton_category = {
 						785 = { CONTROLLER = { has_war_with = ROOT } }
 
 						# Vichy and Corsica
-						735 = { CONTROLLER = { has_war_with = ROOT } is_core_of = VIC }
-						21  = { CONTROLLER = { has_war_with = ROOT } is_core_of = VIC }
-						32  = { CONTROLLER = { has_war_with = ROOT } is_core_of = VIC }
-						20  = { CONTROLLER = { has_war_with = ROOT } is_core_of = VIC }
-						26  = { CONTROLLER = { has_war_with = ROOT } is_core_of = VIC }
-						22  = { CONTROLLER = { has_war_with = ROOT } is_core_of = VIC }
-						31  = { CONTROLLER = { has_war_with = ROOT } is_core_of = VIC }
-						25  = { CONTROLLER = { has_war_with = ROOT } is_core_of = VIC }
-						33  = { CONTROLLER = { has_war_with = ROOT } is_core_of = VIC }
-						1   = { CONTROLLER = { has_war_with = ROOT } is_core_of = VIC }
+						735 = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
+						21  = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
+						32  = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
+						20  = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
+						26  = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
+						22  = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
+						31  = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
+						25  = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
+						33  = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
+						1   = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
 					}
 				}
 				# Spain is fucked
