@@ -47,8 +47,8 @@ focus_tree = {
 		id = GER_west_wall
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = GER_four_year_plan }
-		x = -5
-		y = 1
+		x = -6
+		y = 2
 		relative_position_id = GER_four_year_plan
 		cost = 10
 		ai_will_do = {
@@ -1536,7 +1536,7 @@ focus_tree = {
 		id = GER_grosraumwirtschaft
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = GER_four_year_plan }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = GER_four_year_plan
 		cost = 10
@@ -1554,7 +1554,7 @@ focus_tree = {
 		id = GER_align_hungary
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = GER_grosraumwirtschaft }
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = GER_grosraumwirtschaft
 		cost = 10
@@ -1618,7 +1618,7 @@ focus_tree = {
 		id = GER_align_romania
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = GER_grosraumwirtschaft }
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = GER_grosraumwirtschaft
 		cost = 10
@@ -1677,14 +1677,77 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = GER_align_bulgaria
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = GER_grosraumwirtschaft }
+		x = -2
+		y = 1
+		relative_position_id = GER_grosraumwirtschaft
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = { has_war_with = BUL }
+		}
+
+		bypass = {
+			BUL = {
+				OR = {
+					exists = no
+					is_subject = yes
+					AND = {
+						is_subject = no
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				BUL = {
+					add_timed_idea = { idea = GER_align_bulgaria days = 730 }
+				}
+			}	
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				BUL = {
+					add_timed_idea = { idea = GER_align_bulgaria_unaligned days = 730 }
+				}
+			}	
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				BUL = {
+					add_timed_idea = { idea = GER_align_bulgaria_democratic days = 730 }
+				}
+			}	
+			BUL = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = GER_align_bulgaria
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = GER_integrate_war_economies
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = GER_align_hungary }
-		prerequisite = { focus = GER_align_romania }
+		prerequisite = { focus = GER_align_hungary focus = GER_align_bulgaria focus = GER_align_romania }
 		mutually_exclusive = { focus = GER_german_war_economy }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = GER_align_hungary
 		cost = 10
@@ -1702,6 +1765,11 @@ focus_tree = {
 					is_free_or_subject_of_root = yes
 				}
 				ROM = {
+					has_war = yes
+					is_in_faction_with = ROOT
+					is_free_or_subject_of_root = yes
+				}
+				BUL = {
 					has_war = yes
 					is_in_faction_with = ROOT
 					is_free_or_subject_of_root = yes
@@ -1769,6 +1837,26 @@ focus_tree = {
 					}
 				}
 			}
+			BUL = {
+				every_state = {
+					limit = { has_state_flag = GER_integrate_war_economies_1 }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				every_state = {
+					limit = { has_state_flag = GER_integrate_war_economies_2 }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 		}
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1786,6 +1874,13 @@ focus_tree = {
 				}
 				custom_effect_tooltip = GER_integrate_war_economies_tt2
 				custom_effect_tooltip = GER_integrate_war_economies_tt4
+			}
+			if = {
+				limit = {
+					NOT = { is_in_faction_with = BUL }
+				}
+				custom_effect_tooltip = GER_integrate_war_economies_tt5
+				custom_effect_tooltip = GER_integrate_war_economies_tt6
 			}
 			if = {
 				limit = {
@@ -1983,6 +2078,106 @@ focus_tree = {
 							NOT = { has_dlc = "Death or Dishonor" }
 						}
 						puppet = ROM
+					}
+				}
+				custom_effect_tooltip = GER_integrate_war_economies_tt4
+			}
+			if = {
+				limit = {
+					BUL = {
+						is_in_faction_with = GER
+						is_free_or_subject_of_root = yes
+					}
+				}
+				BUL = { country_event = { id = wtt_germany.72 } }
+				effect_tooltip = {
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+							NOT = { has_state_flag = GER_integrate_war_economies }
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+						set_state_flag = GER_integrate_war_economies
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+							NOT = { has_state_flag = GER_integrate_war_economies }
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+						set_state_flag = GER_integrate_war_economies
+					}
+					BUL = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = arms_factory
+									size > 1
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes
+							}
+							set_state_flag = GER_integrate_war_economies_1
+						}
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = arms_factory
+									size > 1
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes
+							}
+							set_state_flag = GER_integrate_war_economies_2
+						}
+					}
+					if = {
+						limit = {
+							has_dlc = "Death or Dishonor" 
+						}
+						set_autonomy = { target = BUL autonomy_state = autonomy_satellite }
+					}
+					if = {
+						limit = { 
+							has_dlc = "Together for Victory"
+							NOT = { has_dlc = "Death or Dishonor" } 
+						}
+						set_autonomy = { target = BUL autonomy_state = autonomy_dominion }
+					}
+					if = {
+						limit = { 
+							NOT = { has_dlc = "Together for Victory" }
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						puppet = BUL
 					}
 				}
 				custom_effect_tooltip = GER_integrate_war_economies_tt4

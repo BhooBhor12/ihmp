@@ -17,3 +17,5 @@ sleeping_navy_3_desc:0 "USA cannot risk provoking other naval powers by major ex
 USA_maritime_commission_2:1 "Maritime Commission"
 USA_maritime_commission_2_desc:1 "While most laymen only focus on the warships, the true experts know that it is the humble cargo vessel that wins wars. To increase the amount of shipping available in times of war, we will form a special board to coordinate construction."
 USA_LL_licensing:0 "\n This will allow us to license designs from and to §YThe Allies§!\n\n"
+GER_align_bulgaria:0 "Align Bulgaria"
+GER_align_bulgaria_desc:0 "Bulgaria is already in our sphere of influence, but we could easily sway them further to our way of thinking, making them even more easily manipulable in the future."

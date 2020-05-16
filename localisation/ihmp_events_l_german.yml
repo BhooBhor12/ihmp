@@ -20,3 +20,5 @@
  panay_refused:0 "Japan has refused to pay compensation for the Panay Incident"
  panay_incident.3.b.tt1:0 "This will allow USA to pass Two Ocean Navy act with high congress support regardless of other requirements!"
  panay_incident.5.a.tt:0 "This will allow us to pass Two Ocean Navy act with high congress support regardless of other requirements!"
+ GER_integrate_war_economies_tt5:2 "If §Y[BUL.GetName]§! is in a faction with §Y[Root.GetName]§!, add §Y4 Military Factory§! each to §Y[Root.GetName]§! and §Y[BUL.GetName]§!, and §Y[BUL.GetName]§! becomes puppet of §Y[Root.GetName]§!.\n"
+ GER_integrate_war_economies_tt6:0 "§R[BUL.GetName] must approve of the agreement for the bonuses to take effect.§!\n"
