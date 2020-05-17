@@ -330,7 +330,7 @@ equipment_modules = {
 			reliability = -0.08
 		}
 		add_average_stats = {
-			hg_armor_piercing = 11
+			hg_armor_piercing = 22
 		}
 		build_cost_resources = {
 			steel = 1
@@ -362,7 +362,7 @@ equipment_modules = {
 			reliability = -0.08
 		}
 		add_average_stats = {
-			hg_armor_piercing = 12
+			hg_armor_piercing = 24
 		}
 		build_cost_resources = {
 			steel = 1
@@ -394,7 +394,7 @@ equipment_modules = {
 			reliability = -0.08
 		}
 		add_average_stats = {
-			hg_armor_piercing = 13
+			hg_armor_piercing = 26
 		}
 		build_cost_resources = {
 			steel = 2
@@ -432,7 +432,7 @@ equipment_modules = {
 			reliability = -0.08
 		}
 		add_average_stats = {
-			hg_armor_piercing = 14
+			hg_armor_piercing = 28
 		}
 		build_cost_resources = {
 			steel = 2
