@@ -165,7 +165,7 @@ equipment_modules = {
 		add_stats = {
 			
 			hg_attack = 12
-			build_cost_ic = 1275
+			build_cost_ic = 1250
 		}
 		multiply_stats = {
 			naval_speed = -0.05
@@ -273,7 +273,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			module_category = ship_heavy_battery
-			convert_cost_ic = 1800
+			convert_cost_ic = 1450
 		}
 		
 		can_convert_from = {
@@ -291,7 +291,7 @@ equipment_modules = {
 		
 		add_stats = {
 			hg_attack = 18
-			build_cost_ic = 1800
+			build_cost_ic = 1700
 		}
 		build_cost_resources = {
 			steel = 1
