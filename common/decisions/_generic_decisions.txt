@@ -1601,7 +1601,7 @@ war_measures = {
 			}
 			add_to_variable = {
 				var = GER_war_bonds_var
-				value = 25
+				value = 10
 			}
 			if = {
 				limit = {
@@ -1612,26 +1612,26 @@ war_measures = {
 					}
 					check_variable = {
 						var = GER_war_bonds_war_support_var
-						value = -0.025
+						value = -0.01
 						compare = greater_than
 					}
 				}
 				set_variable = {
 					var = GER_war_bonds_war_support_var
-					value = -0.025
+					value = -0.01
 				}
 			}
 			if = {
 				limit = {
 					check_variable = {
 						var = GER_war_bonds_war_support_var
-						value = -0.025
+						value = -0.01
 						compare = less_than_or_equals
 					}
 				}
 				add_to_variable = {
 					var = GER_war_bonds_war_support_var
-					value = -0.025
+					value = -0.01
 				}
 				add_war_support = GER_war_bonds_war_support_var
 			}
