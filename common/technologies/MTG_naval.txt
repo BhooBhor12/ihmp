@@ -794,7 +794,7 @@ technologies = {
 		xp_research_type = navy
 		xp_research_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 2.5
+		research_cost = 1.25
 
 		start_year = 1936
 		
@@ -842,7 +842,7 @@ technologies = {
 		xp_research_type = navy
 		xp_research_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 2.5
+		research_cost = 1.25
 
 		start_year = 1940
 		
@@ -884,7 +884,7 @@ technologies = {
 		xp_research_type = navy
 		xp_research_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 2.5
+		research_cost = 1.25
 
 		start_year = 1944
 		
@@ -1160,7 +1160,7 @@ technologies = {
 		xp_research_type = navy
 		xp_research_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 2.5
+		research_cost = 1.25
 
 		start_year = 1936
 		
@@ -1203,8 +1203,8 @@ technologies = {
 		
 		xp_research_type = navy
 		xp_research_cost = 50
-		xp_research_bonus = 1.50
-		research_cost = 2.5
+		xp_research_bonus = 1.25
+		research_cost = 1.25
 
 		start_year = 1940
 		
