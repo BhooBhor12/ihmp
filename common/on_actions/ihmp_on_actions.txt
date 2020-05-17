@@ -170,48 +170,34 @@ on_actions = {
 	on_peaceconference_ended = {
 		effect = {
 			if = { 
-				limit = { has_dlc = "Waking the Tiger" }
-				every_state = {
-					limit = {
-						is_core_of = SHX
-						NOT = { is_owned_by = SHX }
-					}
-					remove_core_of = SHX
+				limit = { 
+					has_dlc = "Waking the Tiger"
+					613 = { is_owned_by  = JAP }
 				}
-				every_state = {
-					limit = {
-						is_core_of = PRC
-						NOT = { is_owned_by = PRC }
+				JAP = {
+					613 = {
+						set_variable = { JAP.chi_compl = compliance }
 					}
-					remove_core_of = PRC
-				}
-				every_state = {
-					limit = {
-						is_core_of = GXC
-						NOT = { is_owned_by = GXC }
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = SHX
+								is_core_of = PRC
+								is_core_of = GXC
+								is_core_of = YUN
+								is_core_of = XSM
+								is_core_of = SIK
+							}
+							is_owned_by = JAP
+						}
+						remove_core_of = SHX
+						remove_core_of = PRC
+						remove_core_of = GXC
+						remove_core_of = YUN
+						remove_core_of = XSM
+						remove_core_of = SIK
+						set_compliance = JAP.chi_compl
 					}
-					remove_core_of = GXC
-				}
-				every_state = {
-					limit = {
-						is_core_of = YUN
-						NOT = { is_owned_by = YUN }
-					}
-					remove_core_of = YUN
-				}
-				every_state = {
-					limit = {
-						is_core_of = XSM
-						NOT = { is_owned_by = XSM }
-					}
-					remove_core_of = XSM
-				}
-				every_state = {
-					limit = {
-						is_core_of = SIK
-						NOT = { is_owned_by = SIK }
-					}
-					remove_core_of = SIK
 				}
 			}
 		}
