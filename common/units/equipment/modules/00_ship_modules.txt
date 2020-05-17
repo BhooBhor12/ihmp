@@ -164,7 +164,7 @@ equipment_modules = {
 		
 		add_stats = {
 			
-			hg_attack = 11
+			hg_attack = 12
 			build_cost_ic = 1275
 		}
 		multiply_stats = {
@@ -191,7 +191,7 @@ equipment_modules = {
 		add_equipment_type = capital_ship
 		
 		add_stats = {
-			hg_attack = 12
+			hg_attack = 14
 			build_cost_ic = 1350
 		}
 		multiply_stats = {
@@ -223,7 +223,7 @@ equipment_modules = {
 		add_equipment_type = capital_ship
 		
 		add_stats = {
-			hg_attack = 13
+			hg_attack = 15
 			build_cost_ic = 1450
 		}
 		multiply_stats = {
@@ -256,7 +256,7 @@ equipment_modules = {
 		
 		add_stats = {
 			
-			hg_attack = 15
+			hg_attack = 16
 			build_cost_ic = 1650
 			
 		}
@@ -290,7 +290,7 @@ equipment_modules = {
 		add_equipment_type = capital_ship
 		
 		add_stats = {
-			hg_attack = 16
+			hg_attack = 18
 			build_cost_ic = 1800
 		}
 		build_cost_resources = {
