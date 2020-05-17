@@ -320,7 +320,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = capital_ship
 		add_stats = {
-			hg_attack = 6.75
+			hg_attack = 8.0
 			build_cost_ic = 750
 			surface_visibility = 3.5
 		}
@@ -352,7 +352,7 @@ equipment_modules = {
 
 		add_equipment_type = capital_ship
 		add_stats = {
-			hg_attack = 7.25
+			hg_attack = 9.0
 			build_cost_ic = 800
 			surface_visibility = 3.5
 		}
@@ -384,7 +384,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			hg_attack = 7.75
+			hg_attack = 10.0
 			build_cost_ic = 825
 			surface_visibility = 3.5
 		}
@@ -422,7 +422,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			hg_attack = 9
+			hg_attack = 11.0
 			build_cost_ic = 900
 			surface_visibility = 3.5
 		}
