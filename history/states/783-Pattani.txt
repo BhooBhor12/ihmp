@@ -1,0 +1,28 @@
+state={
+	id=783
+	name="STATE_783"
+	provinces={
+		1279 4297 7236 10156 12131 
+	}
+	
+	resources={
+		rubber=22.000
+	}
+
+	history={
+		owner = SIA
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			7236 1 
+		}
+		add_core_of = SIA
+
+	}
+
+	manpower=416352
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

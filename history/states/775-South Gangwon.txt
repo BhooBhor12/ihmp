@@ -1,0 +1,20 @@
+state={
+	id=775
+	name="STATE_775"
+	provinces={
+		1148 4004 4103 7021 9936 10036 11912 11958 12011 
+	}
+	history={
+		owner = JAP
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = KOR
+
+	}
+
+	manpower=1957362
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,22 @@
+state={
+	id=786
+	name="STATE_786"
+	resources={
+		rubber=15.000
+	}
+	provinces={
+		1302 4379 4397 7280 9988 10016 11909 12297 
+	}
+	history={
+		add_core_of = VIN
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+		}
+
+	}
+
+	manpower=3246353
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

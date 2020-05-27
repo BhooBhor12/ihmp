@@ -1,0 +1,22 @@
+state={
+	id=784
+	name="STATE_784"
+	provinces={
+		1535 4511 7516 10384 12360 
+	}
+	resources={
+		rubber=2.00
+	}
+
+	history={
+		owner = SIA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SIA
+
+	}
+	manpower=573463
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,37 @@
+
+state={
+	id=336
+	name="STATE_336"
+	resources={
+		rubber=20.000
+		steel=8.000
+		aluminium=4.000
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			12299 10 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 6
+			12299 = {
+				naval_base = 8
+				coastal_bunker = 3
+
+			}
+
+		}
+		add_core_of = MAL
+
+	}
+
+	provinces={
+		12113 12299 
+	}
+	manpower=610809
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

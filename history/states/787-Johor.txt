@@ -1,0 +1,30 @@
+state={
+	id=787
+	name="STATE_787"
+	provinces={
+		4367 4424 7427 10313 
+	}
+	resources={
+		rubber=60.000
+		steel=10.000
+		tungsten=89.000
+		aluminium=4.000
+	}
+
+	history={
+		owner = MAL
+		victory_points = {
+			4424 1
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = MAL
+
+	}
+
+	manpower=501374
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

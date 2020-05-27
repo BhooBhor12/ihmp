@@ -1,0 +1,24 @@
+state={
+	id=768
+	name="STATE_768"
+	provinces={
+		1291 7342 12144 
+	}
+	resources={
+		rubber=24
+	}
+
+	history={
+		owner = MAL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = MAL
+
+	}
+	manpower=267858
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

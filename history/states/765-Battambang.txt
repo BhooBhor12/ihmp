@@ -1,0 +1,24 @@
+state={
+	id=765
+	name="STATE_765"
+	provinces={
+		1353 1592 4251 10134 10177 10467 12460 
+	}
+	history={
+		add_core_of = CAM
+		#add_core_of = SIA
+		buildings = {
+			infrastructure = 2
+
+		}
+		owner = FRA
+
+	}
+	resources={
+		rubber=4.00
+	}
+
+	manpower=1637463
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
