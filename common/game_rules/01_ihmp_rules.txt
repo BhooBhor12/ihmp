@@ -14,6 +14,86 @@ IHMP_HISTORY = {
 	}
 }
 
+GER_naval_behavior = {
+	name = "GER_naval_behavior"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "DEFAULT_DESC"
+	}
+	default = {
+		name = GER_naval_1
+		text = "GER_NAVAL_1"
+		desc = "GER_NAVAL_1_DESC"
+	}
+}
+
+ITA_naval_behavior = {
+	name = "ITA_naval_behavior"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "DEFAULT_DESC"
+	}
+	default = {
+		name = ITA_naval_1
+		text = "ITA_NAVAL_1"
+		desc = "ITA_NAVAL_1_DESC"
+	}
+}
+
+JAP_naval_behavior = {
+	name = "JAP_naval_behavior"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "DEFAULT_DESC"
+	}
+	default = {
+		name = JAP_naval_1
+		text = "JAP_NAVAL_1"
+		desc = "JAP_NAVAL_1_DESC"
+	}
+}
+
+USA_naval_behavior = {
+	name = "USA_naval_behavior"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "DEFAULT_DESC"
+	}
+	default = {
+		name = USA_naval_1
+		text = "USA_NAVAL_1"
+		desc = "USA_NAVAL_1_DESC"
+	}
+}
+
+ENG_naval_behavior = {
+	name = "ENG_naval_behavior"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "DEFAULT_DESC"
+	}
+	default = {
+		name = ENG_naval_1
+		text = "ENG_NAVAL_1"
+		desc = "ENG_NAVAL_1_DESC"
+	}
+}
+
 AI_PLANES = {
 	name = "AI_PLANES"
 	required_dlc = "Man the Guns"
