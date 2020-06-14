@@ -85,7 +85,6 @@ if = {
 		sonar = 1
 		basic_cruiser_armor_scheme = 1
 	}
-	set_naval_oob = "GER_1936_naval_mtg"
 }
 if = {
 	limit = {
@@ -104,13 +103,6 @@ set_research_slots = 5
 set_convoys = 200
 set_stability = 0.75 
 set_war_support = 0.3
-
-#Trade
-create_import = {
-		resource = tungsten
-		factories = 1
-		exporter = SWE
-}
 
 1939.1.1 = {
 	add_named_threat = { threat = 40 name = 1939_bookmark_threat }
