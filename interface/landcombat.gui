@@ -643,7 +643,8 @@ guiTypes = {
 				name = "committed_window"
 				position = { x = 0 y = 19 }
 				orientation = upper_left
-				size = {width=280 height=175}
+				size = {width=280 height=292}
+				# size = {width=280 height=175}
 				clipping = yes
 				verticalScrollbar = "right_vertical_slider"
 				margin = {top=10 left=0 bottom=0 right=0}				
@@ -656,7 +657,8 @@ guiTypes = {
 				gridBoxType = {
 					name ="list"
 					position = { x = 8 y = 0 }
-					size = { width= 221 height = 140}
+					size = { width= 221 height = 260}
+					# size = { width= 221 height = 140}
 					slotsize = { width = 244 height = 40 }
 					max_slots_horizontal = 1
 					Orientation = "UPPER_LEFT"
@@ -665,7 +667,8 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "defender_reserves_label"
-				position = { x = 10 y = 194 }
+				position = { x = 240 y = 8 }
+				# position = { x = 10 y = 194 }
 				font = "hoi_18mbs"
 				maxWidth = 245
 				maxHeight = 20
@@ -675,9 +678,11 @@ guiTypes = {
 			
 			containerWindowType = { 
 				name = "reserves_window"
-				position = { x = 10 y = 215 }
+				position = { x = 280 y = 29 }
+				# position = { x = 10 y = 215 }
 				orientation = upper_left
-				size = {width=270 height=80}
+				size = {width=151 height=280}
+				# size = {width=270 height=80}
 				clipping = yes
 				verticalScrollbar = "right_vertical_slider"
 				margin = {top=0 left=0 bottom=0 right=0}
@@ -689,10 +694,12 @@ guiTypes = {
 
 				gridBoxType = {
 					name ="list"
-					position = { x = -83 y = 0 }
-					size = { width=270 height=80}
+					position = { x = -20 y = 0 }
+					# position = { x = -83 y = 0 }
+					size = { width=151 height=80}
+					# size = { width=270 height=80}
 					slotsize = { width = 119 height = 29 }
-					max_slots_horizontal = 2
+					max_slots_horizontal = 1
 					Orientation = "UPPER_LEFT"
 				}
 			}
@@ -786,12 +793,14 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "name"
 			position = { x = 45 y = 7  }
+			#position = { x = 40 y = 7  }
 			format = left
 			textureFile = ""
 			font = "Arial12"
 			borderSize = {x = 0 y = 0}
 			text = ""	
 			maxWidth = 69
+			#maxWidth = 74
 			maxHeight = 16
 			Orientation = "UPPER_LEFT"
 
