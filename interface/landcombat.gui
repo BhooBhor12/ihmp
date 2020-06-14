@@ -785,13 +785,13 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "name"
-			position = { x = 40 y = 7  }
+			position = { x = 45 y = 7  }
 			format = left
 			textureFile = ""
 			font = "Arial12"
 			borderSize = {x = 0 y = 0}
 			text = ""	
-			maxWidth = 74
+			maxWidth = 69
 			maxHeight = 16
 			Orientation = "UPPER_LEFT"
 
