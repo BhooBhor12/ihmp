@@ -457,3 +457,65 @@ operations = {
 		}
 	}
 }
+
+foreign_politics = {
+	defend_Kresy = {
+		allowed = {
+			tag = POL
+			is_ai = no
+		}
+
+		available = {
+			divisions_in_border_state = {
+				size > POL_Soviet_Defense
+				state = {
+					every_state = {
+						is_controlled_by = POL
+						add_to_variable = { POL_Soviet_Defense@PREV }
+					}
+				}
+				border_state = {
+					every_state = {
+						is_controlled_by = SOV
+					
+					}
+				}
+			}
+		}
+
+		activation = {
+			has_war_with = GER
+			GER = {
+				has_non_aggression_pact_with = SOV
+			}
+		}
+
+		is_good = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			add_timed_idea = {
+				idea = POL_surrender
+				days = 180
+			}
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = POL_Soviet_Defense
+				value = 2
+			}
+			if = {
+				limit = {
+					check_variable = { var = POL_Soviet_Defense
+					value = 6
+					compare = less_than }
+				}
+				hidden_effect = {
+					set_variable = {
+					var = POL_Soviet_Defense
+					value = 6
+					}
+				}
+			}
+		}
+	}
+}
