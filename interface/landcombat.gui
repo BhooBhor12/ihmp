@@ -221,7 +221,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "window_title"
-			position = { x = 55 y = 2 }
+			position = { x = 55 y = -2000 }
 			textureFile = ""
 			font = "hoi_30header"
 			borderSize = {x = 0 y = 0}
@@ -260,7 +260,7 @@ guiTypes = {
 		
 		iconType = {
 			name = "attacker_leader"
-			position = { x = 9 y= 32 }
+			position = { x = 9 y= 37 }
 			# position = { x = 9 y= 112 }
 			spriteType = "GFX_no_combat_leader"
 			Orientation = "UPPER_LEFT"
@@ -269,7 +269,7 @@ guiTypes = {
 
 		iconType = {
 			name = "defender_leader"
-			position = { x = -86 y= 32 }
+			position = { x = -86 y= 37 }
 			# position = { x = -86 y= 112 }
 			spriteType = "GFX_no_combat_leader"
 			Orientation = "UPPER_RIGHT"
@@ -279,7 +279,7 @@ guiTypes = {
 		iconType = {
 			name = "land_battle_leader_frame"
 			quadTextureSprite ="GFX_land_battle_leader_frame"
-			position = { x = 5 y= 30 }
+			position = { x = 5 y= 35 }
 			# position = { x = 5 y= 110 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -287,7 +287,7 @@ guiTypes = {
 		iconType = {
 			name = "attacker_leader_initiative_overlay_glow"
 			quadTextureSprite ="GFX_leader_initiative_overlay_glow"
-			position = { x = 4 y= 28 }
+			position = { x = 4 y= 33 }
 			# position = { x = 4 y= 108 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -295,7 +295,7 @@ guiTypes = {
 		iconType = {
 			name = "land_battle_leader_frame2"
 			quadTextureSprite ="GFX_land_battle_leader_frame"
-			position = { x = -89 y= 30 }
+			position = { x = -89 y= 35 }
 			# position = { x = -89 y= 110 }
 			Orientation = "UPPER_RIGHT"
 		}		
@@ -303,7 +303,7 @@ guiTypes = {
 		iconType = {
 			name = "defender_leader_initiative_overlay_glow"
 			quadTextureSprite ="GFX_leader_initiative_overlay_glow"
-			position = { x = -91 y= 28}
+			position = { x = -91 y= 33}
 			# position = { x = -91 y= 108}
 			Orientation = "UPPER_RIGHT"
 		}		
@@ -326,7 +326,8 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "attacker_leader_name"
-			position = { x=22 y=233 }
+			position = { x=55 y=8 }
+			# position = { x=22 y=233 }
 			font = "hoi_18mbs"
 			maxWidth = 190
 			maxHeight = 14
@@ -338,7 +339,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "defender_leader_name"
-			position = { x=-212 y=233 }
+			position = { x=-272 y=8 }
+			# position = { x=-212 y=233 }
 			font = "hoi_18mbs"
 			maxWidth = 190
 			maxHeight = 14
@@ -426,21 +428,24 @@ guiTypes = {
 		buttonType = {
 			name = "defender_flag"
 			quadTextureSprite = "GFX_flag_small2"
-			position = { x= 437 y = 111 }
+			position = { x= 490 y = 5 }
+			# position = { x= 437 y = 111 }
 			Orientation = "UPPER_LEFT"
 		}
 
 		buttonType = {
 			name = "attacker_flag"
 			quadTextureSprite = "GFX_flag_small2"
-			position = {  x= 89 y = 111 }
+			position = {  x= 9 y = 5 }
+			# position = {  x= 89 y = 111 }
 			Orientation = "UPPER_LEFT"			
 		}
 
 		iconType =	{
 			name ="small_flag_frame_thin"
 			spriteType = "GFX_small_flag_frame_thin"
-			position = { x= 435 y = 109 }
+			position = { x= 488 y = 3 }
+			# position = { x= 435 y = 109 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -448,7 +453,8 @@ guiTypes = {
 		iconType =	{
 			name ="small_flag_frame_thin2"
 			spriteType = "GFX_small_flag_frame_thin"
-			position = { x= 87 y = 109 }
+			position = { x= 7 y = 3 }
+			# position = { x= 87 y = 109 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}		
