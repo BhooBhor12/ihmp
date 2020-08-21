@@ -116,7 +116,7 @@ equipments = {
 
 		
 		surface_detection = 20
-		sub_detection = 1
+		sub_detection = 2
 		surface_visibility = 15
 		naval_speed = 20
 		reliability = 0.80
@@ -394,7 +394,7 @@ equipments = {
 
 		
 		surface_detection = 15
-		sub_detection = 5
+		sub_detection = 10
 		surface_visibility = 15
 		naval_speed = 20
 		reliability = 0.8
@@ -432,7 +432,7 @@ equipments = {
 
 		
 		surface_detection = 20
-		sub_detection = 5
+		sub_detection = 10
 		naval_speed = 25
 		reliability = 0.85
 
@@ -483,7 +483,7 @@ equipments = {
 
 		
 		surface_detection = 30
-		sub_detection = 10
+		sub_detection = 20
 		naval_speed = 28
 		reliability = 0.90
 
@@ -535,7 +535,7 @@ equipments = {
 
 		
 		surface_detection = 40
-		sub_detection = 10
+		sub_detection = 20
 		naval_speed = 30
 		reliability = 0.92
 
@@ -647,7 +647,7 @@ equipments = {
 
 		
 		surface_detection = 12
-		sub_detection = 5
+		sub_detection = 10
 		surface_visibility = 15
 		naval_speed = 24
 		reliability = 0.80
@@ -698,7 +698,7 @@ equipments = {
 
 		
 		surface_detection = 15
-		sub_detection = 5
+		sub_detection = 10
 		surface_visibility = 15
 		naval_speed = 30
 		reliability = 0.85
@@ -748,7 +748,7 @@ equipments = {
 
 		
 		surface_detection = 25
-		sub_detection = 5
+		sub_detection = 10
 		surface_visibility = 15
 		naval_speed = 33
 		reliability = 0.90
@@ -799,7 +799,7 @@ equipments = {
 
 		
 		surface_detection = 40
-		sub_detection = 5
+		sub_detection = 10
 		surface_visibility = 15
 		naval_speed = 33
 		reliability = 0.92
@@ -913,7 +913,7 @@ equipments = {
 
 		
 		surface_detection = 40
-		sub_detection = 10
+		sub_detection = 20
 		surface_visibility = 15
 		naval_speed = 25
 		reliability = 0.9
@@ -1005,7 +1005,7 @@ equipments = {
 
 		
 		surface_detection = 20
-		sub_detection = 1
+		sub_detection = 2
 		surface_visibility = 15
 		naval_speed = 25
 		reliability = 0.9
