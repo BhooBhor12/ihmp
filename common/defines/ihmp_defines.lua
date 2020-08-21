@@ -29,9 +29,9 @@ NDefines.NCountry.RESISTANCE_STRENGTH_FROM_VP = 0.0017			-- was 0.001 -- How muc
 NDefines.NCountry.RESISTANCE_STRENGTH_FROM_NEIGHBORS = 0.4 		-- was 0.5 -- Multiplies how much resistance can spread from one state to its neighbors, a state will spread whatever is highest of its victorypoints resistance increase or half of any of its neighbors spread, multiplied by this
 
 NDefines.NCountry.ATTACHE_XP_SHARE = 0.05							-- was 0.2 -- Country received xp from attaches
-NDefines.NCountry.SUPPLY_CONVOY_FACTOR = 0.5					-- was 0.25-- How many convoys each supply needs
+NDefines.NCountry.SUPPLY_CONVOY_FACTOR = 0.25					-- was 0.25 (doubled by Alex then halved when doubling convoy HP) -- How many convoys each supply needs
 
-NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.0015				-- was 0.0005 -- num convoys needed per fuel land lease 
+NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.00075				-- was 0.0005 (modified by Alex then halved when doubling convoy HP)-- num convoys needed per fuel land lease 
 NDefines.NCountry.GIE_EXILE_TROOPS_DEPLOY_TRAINING_MAX_LEVEL = 15
 NDefines.NCountry.GIE_EXILE_AIR_START_EXPERIENCE = 300
 NDefines.NCountry.GIE_VETERAN_MANPOWER_NON_CORE_GAIN_FACTOR = 0.0025	-- was 0.005 -- Factor on amount of manpower gained from owned states that are controlled by an enemy. State manpower reduced by factor 1000 in code.
