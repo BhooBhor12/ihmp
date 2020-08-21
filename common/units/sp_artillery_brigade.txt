@@ -29,7 +29,7 @@ sub_units = {
 		default_morale = 0.03
 		max_strength = 0.6
 		training_time = 180
-		weight = 2
+		weight = 1
 		supply_consumption = 0.4
 
 		suppression = 1.5
@@ -93,7 +93,7 @@ sub_units = {
 		default_morale = 0.03
 		max_strength = 0.6
 		training_time = 180
-		weight = 2.5
+		weight = 1.25
 		supply_consumption = 0.44
 
 		suppression = 1.8
@@ -162,7 +162,7 @@ sub_units = {
 		max_organisation = 0
 		default_morale = 0.03
 		max_strength = 0.6
-		weight = 3.0
+		weight = 1.5
 		supply_consumption = 0.6
 
 		suppression = 1.5
@@ -234,7 +234,7 @@ sub_units = {
 		default_morale = 0.03
 		max_strength = 0.6
 		training_time = 180
-		weight = 3.5
+		weight = 1.75
 		supply_consumption = 0.8
 
 		suppression = 2
@@ -305,7 +305,7 @@ sub_units = {
 		default_morale = 0.03
 		max_strength = 0.6
 		training_time = 180
-		weight = 3.0
+		weight = 1.5
 		supply_consumption = 0.5
 
 		suppression = 2

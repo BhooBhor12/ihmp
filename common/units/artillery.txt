@@ -32,7 +32,7 @@ sub_units = {
 		max_organisation = 0
 		default_morale = 0.07
 		max_strength = 0.2
-		weight = 0.2
+		weight = 0.1
 		
 		supply_consumption = 0.16
 
@@ -78,7 +78,7 @@ sub_units = {
 		max_organisation = 0
 		default_morale = 0.07
 		max_strength = 0.2
-		weight = 0.2
+		weight = 0.1
 		
 		supply_consumption = 0.16
 
