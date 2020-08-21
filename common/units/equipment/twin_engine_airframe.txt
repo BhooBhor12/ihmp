@@ -35,7 +35,7 @@ equipments = {
 		naval_strike_targetting = 6
 
 		#Space taken in convoy
-		lend_lease_cost = 10
+		lend_lease_cost = 16
 		
 		build_cost_ic = 35
 		resources = {
@@ -78,6 +78,9 @@ equipments = {
 		naval_strike_attack = 15
 		naval_strike_targetting = 2
 		
+		#Space taken in convoy
+		lend_lease_cost = 16
+
 		build_cost_ic = 56
 		resources = {
 			aluminium = 2
@@ -120,6 +123,9 @@ equipments = {
 		naval_strike_attack = 5
 		naval_strike_targetting = 10
 		
+		#Space taken in convoy
+		lend_lease_cost = 10
+
 		build_cost_ic = 28
 		resources = {
 			#oil = 1			
@@ -374,6 +380,9 @@ equipments = {
 		naval_strike_attack = 0
 		naval_strike_targetting = 0
 		
+		#Space taken in convoy
+		lend_lease_cost = 10
+
 		resources = {			
 			aluminium = 2
 			rubber = 1

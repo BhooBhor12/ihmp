@@ -126,6 +126,9 @@ equipments = {
 		naval_strike_attack = 3
 		naval_strike_targetting = 10
 		
+		#Space taken in convoy
+		lend_lease_cost = 8
+
 		build_cost_ic = 22
 		resources = {
 			#oil = 1
@@ -172,6 +175,9 @@ equipments = {
 		naval_strike_attack = 4
 		naval_strike_targetting = 10
 		
+		#Space taken in convoy
+		lend_lease_cost = 8
+
 		build_cost_ic = 22
 		resources = {
 			#oil = 1
@@ -214,6 +220,9 @@ equipments = {
 		naval_strike_attack = 15
 		naval_strike_targetting = 7.5
 		
+		#Space taken in convoy
+		lend_lease_cost = 16
+
 		build_cost_ic = 26
 		resources = {
 			#oil = 1
@@ -258,6 +267,9 @@ equipments = {
 		naval_strike_attack = 15
 		naval_strike_targetting = 7.5
 		
+		#Space taken in convoy
+		lend_lease_cost = 8
+
 		build_cost_ic = 26
 		resources = {
 			#oil = 1
@@ -300,6 +312,9 @@ equipments = {
 		naval_strike_attack = 5
 		naval_strike_targetting = 10
 		
+		#Space taken in convoy
+		lend_lease_cost = 10
+
 		build_cost_ic = 36
 		resources = {
 			aluminium = 2
@@ -850,6 +865,9 @@ equipments = {
 			plane_reliability_upgrade
 		}
 
+		#Space taken in convoy
+		lend_lease_cost = 6
+
 		build_cost_ic = 14
 		resources = {
 			aluminium = 2
@@ -949,6 +967,9 @@ equipments = {
 
 		upgrades = {
 		}
+
+		#Space taken in convoy
+		lend_lease_cost = 10
 
 		build_cost_ic = 47
 		resources = {

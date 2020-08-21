@@ -115,6 +115,9 @@ equipments = {
 		ap_attack = 2
 		air_attack = 0
 		
+		#Space taken in convoy
+		lend_lease_cost = 3
+
 		build_cost_ic = 4
 		resources = {
 			tungsten = 2
@@ -178,6 +181,9 @@ equipments = {
 		hard_attack = 1
 		ap_attack = 2
 		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 5
 		
 		build_cost_ic = 12
 		resources = {
