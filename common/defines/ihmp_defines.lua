@@ -30,6 +30,9 @@ NDefines.NCountry.RESISTANCE_STRENGTH_FROM_NEIGHBORS = 0.4 		-- was 0.5 -- Multi
 
 NDefines.NCountry.ATTACHE_XP_SHARE = 0.05							-- was 0.2 -- Country received xp from attaches
 NDefines.NCountry.SUPPLY_CONVOY_FACTOR = 0.25					-- was 0.25 (doubled by Alex then halved when doubling convoy HP) -- How many convoys each supply needs
+NDefines.NCountry.CONVOYS_SUNK_MULTIPLIER_FOR_WAR_SUPPORT = 0.4	--	was 0.2 (doubled when doubling convoy HP)	-- Scaling of trade convoy raided to war support impact, will be added weekly as a war support penalty
+NDefines.NCountry.CONVOYS_SUNK_MULTIPLIER_FOR_WAR_SUPPORT_FROM_OVERSEA_STATES = 0.4			--	was 0.2 (doubled when doubling convoy HP)-- once a resource transfer convoys from our states ship sunk, you will get a larger negative impact on your war support
+NDefines.NCountry.CONVOYS_BEING_RAIDED_DAILY_WAR_SUPPORT_IMPACT = 0.2	--	was 0.2 (doubled when doubling convoy HP)-- trade convoys being raided will give a daily war support penalty depending on how important that resource is and how inefficent convoys are
 
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.00075				-- was 0.0005 (modified by Alex then halved when doubling convoy HP)-- num convoys needed per fuel land lease 
 NDefines.NCountry.GIE_EXILE_TROOPS_DEPLOY_TRAINING_MAX_LEVEL = 15
