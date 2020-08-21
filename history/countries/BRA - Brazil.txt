@@ -172,7 +172,7 @@ create_country_leader = {
 }
 
 
-set_convoys = 40
+set_convoys = 20
 
 1939.1.1 = {
 	set_politics = {

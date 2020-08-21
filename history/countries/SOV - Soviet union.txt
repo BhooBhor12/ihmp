@@ -256,7 +256,7 @@ if = {
 }
 
 
-set_convoys = 50
+set_convoys = 25
 
 if = {
 	limit = {

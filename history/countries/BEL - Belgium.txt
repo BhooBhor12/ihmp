@@ -106,7 +106,7 @@ set_popularities = {
 	}
 }
 
-set_convoys = 80
+set_convoys = 40
 set_stability = 0.75
 
 create_country_leader = {

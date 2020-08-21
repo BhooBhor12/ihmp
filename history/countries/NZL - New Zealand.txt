@@ -202,7 +202,7 @@ create_country_leader = {
 	}
 }
 
-set_convoys = 70
+set_convoys = 35
 
 1939.1.1 = {
 	set_politics = {
@@ -223,7 +223,7 @@ set_convoys = 70
 			#
 		}
 	}
-	set_convoys = 80
+	set_convoys = 40
 }
 
 create_corps_commander = {
