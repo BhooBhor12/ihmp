@@ -129,7 +129,7 @@ equipments = {
 		build_cost_ic = 22
 		resources = {
 			#oil = 1
-			aluminium = 2
+			aluminium = 3
 			rubber = 1
 		}
 		
@@ -175,7 +175,7 @@ equipments = {
 		build_cost_ic = 22
 		resources = {
 			#oil = 1
-			aluminium = 2
+			aluminium = 3
 			rubber = 1
 		}
 		
@@ -261,7 +261,7 @@ equipments = {
 		build_cost_ic = 26
 		resources = {
 			#oil = 1
-			aluminium = 2
+			aluminium = 3
 			rubber = 1
 		}
 		
@@ -400,7 +400,7 @@ equipments = {
 		build_cost_ic = 32
 		resources = {
 			#oil = 2
-			aluminium = 4
+			aluminium = 3
 			rubber = 1
 		}
 
@@ -532,7 +532,7 @@ equipments = {
 		build_cost_ic = 37 # cv_version costs 20% more of base archetype
 		resources = {
 			#oil = 2
-			aluminium = 4
+			aluminium = 3
 			rubber = 1
 		}
 

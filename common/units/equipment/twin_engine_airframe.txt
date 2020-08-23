@@ -375,7 +375,7 @@ equipments = {
 		naval_strike_targetting = 0
 		
 		resources = {			
-			aluminium = 2
+			aluminium = 3
 			rubber = 1
 		}
 		
