@@ -1536,7 +1536,7 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = convoy_1
-				amount = 200
+				amount = 100
 				producer = ENG			
 			}
 			add_ideas = CAN_trade_fleet

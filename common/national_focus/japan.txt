@@ -5655,7 +5655,7 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = convoy_1
-				amount = 100
+				amount = 50
 				producer = JAP			
 			}
 			add_ideas = CAN_trade_fleet
